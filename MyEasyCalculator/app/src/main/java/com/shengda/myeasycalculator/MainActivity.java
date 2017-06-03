@@ -7,7 +7,6 @@ package com.shengda.myeasycalculator;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -230,8 +229,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			 */
 			case R.id.btnPercentage:
 				BigDecimal num = new BigDecimal(currentNum);
-				num.divide(new BigDecimal("100"));
-				// Double num = Double.valueOf(currentNum) / 100;
+				num = num.divide(new BigDecimal("100"));
 				displayScreen.setText(num.toString());
 				break;
 
